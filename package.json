@@ -24,18 +24,11 @@
   ],
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"*/**/*.ts\"",
-    "lint-auto-fix": "eslint \"*/**/*.ts\" --fix",
     "node-test": "jest --config=jest.node.config.js",
     "browser-test": "jest --config=jest.puppeteer.config.js",
     "test": "npm run node-test && npm run browser-test",
     "build": "rollup -c",
-    "build:watch": "rollup -cw",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A",
-    "postversion": "git push && git push --tags"
+    "build:watch": "rollup -cw"
   },
   "author": "hMatoba, Joachim Holwech",
   "license": "MIT",
